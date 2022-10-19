@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange currencies</title>
+</head>
+<body>
+    <div th:each=" currency : ${currencies}">
+        <H3 th:text="${currency.get('ccy')}+'/'+${currency.get('base_ccy')}"></H3>
+        <H5 th:text="'Buy: '+${currency.get('buy')}"></H5>
+        <H5 th:text="'Sale: '+${currency.get('sale')}"></H5>
+    </div>
+</body>
+</html>
